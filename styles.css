@@ -1,0 +1,62 @@
+* {
+    background-color: rgb(48, 48, 48);
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* --------------- HEADER --------------- */
+
+.row{
+    padding: 0 20px;
+}
+
+.icono{
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.icono__whatsapp{
+    background-color: #128c7e;
+}
+
+.icono__instagram{
+    background-color: #c13584;
+}
+
+.icono__github{
+    background-color: #6e5494;
+}
+
+.icono__whatsapp,
+.icono__instagram,
+.icono__github{
+    transition: opacity .15s ease-in-out;
+}
+
+.icono__whatsapp:hover,
+.icono__instagram:hover,
+.icono__github:hover{
+    opacity: 60%;
+}
+
+.fa-brands{
+    background-color: transparent;
+}
+
+.btn{
+    float: right;
+    font-size: 1.25rem;
+}
+
+/* ------------------ CUERPO ----------------- */
+.banner{
+    width: 80%;
+    display: block;
+    margin: auto;
+    border-radius: 30px;
+    opacity: 50%;
+    margin-top: 10px;
+}

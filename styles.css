@@ -12,27 +12,31 @@
 }
 
 .icono{
-    border-radius: 50%;
-    text-align: center;
-    display: inline-block;
-    font-size: 1.25rem;
-    color: #fff;
+    display: inline;
 }
 
-.icono__whatsapp{
-    background-color: #128c7e;
+.icono__whatsapp,
+.fa-whatsapp{
+    color: #128c7e;
+    font-size: 2rem;
 }
 
-.icono__instagram{
-    background-color: #c13584;
+.icono__instagram,
+.fa-instagram{
+    color: #c13584;
+    font-size: 2rem;
 }
 
-.icono__github{
-    background-color: #6e5494;
+.icono__github,
+.fa-github{
+    color: #6e5494;
+    font-size: 2rem;
 }
 
-.icono__linkedin{
-    background-color: #0077b5;
+.icono__linkedin,
+.fa-linkedin{
+    color: #0077b5;
+    font-size: 2rem;
 }
 
 .icono__whatsapp,

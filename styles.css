@@ -2,7 +2,7 @@
     background-color: rgb(34, 34, 34);
     color: #fff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /* --------------- HEADER --------------- */
@@ -11,46 +11,36 @@
     padding: 0 20px;
 }
 
-.icono{
-    border-radius: 50%;
-    text-align: center;
-    display: inline-block;
-    font-size: 1.25rem;
-    color: #fff;
-}
-
-.icono__whatsapp{
-    background-color: #128c7e;
-}
-
-.icono__instagram{
-    background-color: #c13584;
-}
-
-.icono__github{
-    background-color: #6e5494;
-}
-
-.icono__linkedin{
-    background-color: #0077b5;
-}
-
-.icono__whatsapp,
-.icono__instagram,
-.icono__github,
-.icono__linkedin{
+.iconos{
+    display: inline;
+    margin-right: 1rem;
     transition: opacity .15s ease-in-out;
 }
 
-.icono__whatsapp:hover,
-.icono__instagram:hover,
-.icono__github:hover,
-.icono__linkedin:hover{
+.iconos:hover{
     opacity: 60%;
 }
 
-.fa-brands{
+.fa-whatsapp{
+    color: #128c7e;
+}
+
+.fa-instagram{
+    color: #c13584;
+}
+
+.fa-github{
+    color: #6e5494;
+}
+
+.fa-linkedin{
+    color: #0077b5;
+}
+
+.icono{
     background-color: transparent;
+    font-size: 2rem;
+    cursor: pointer;
 }
 
 .btn{
@@ -91,10 +81,14 @@
 
 .titulo {
     font-weight: 700;
-    font-size: 2.4rem;
+    font-size: 2.3rem;
     text-transform: uppercase;
     color: #fff;
     background-color: transparent;
+}
+
+.titulo__nombre {
+    text-align: center;
 }
 
 .contenedor-subtitulo{
@@ -113,4 +107,37 @@
 .titulo-2{
     font-weight: 500;
     font-size: 2rem;
+}
+
+/* ------------------ MEDIA QUERIES ------------------ */
+@media screen and (max-width: 910px){
+    .btn{
+        font-size: 1rem;
+    }
+
+    .icono{
+        margin-right: 0.5rem;
+    }
+    
+    .fa-brands {
+        font-size: 1.5rem;
+    }
+
+    .titulo {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .btn{
+        font-size: 0.75rem;
+    }
+
+    .icono{
+        display: none;
+    }
+
+    .titulo {
+        font-size: 1.75rem;
+    }
 }

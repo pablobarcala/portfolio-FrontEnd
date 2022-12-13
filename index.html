@@ -45,11 +45,13 @@
                         <h4>Full stack developer Jr.</h4>
                     </div>
                 </div>
-                <div class="col mt-5">
-                    <h2 class="titulo">Información personal<i style="margin-left: 2%;" class="icono fa-regular fa-pen-to-square" onclick="editar_info()"></i></h2>
-                    <p id="text-info">Soy estudiante de la carrera de Contador Público en la facultad de Ciencias Económicas de la Universidad Nacional de Tucumán. Estudié diseño web con HTML, CSS, Javascript, Sass y Bootstrap, además de desarrollo web con ReactJs y Firebase. Actualmente estudiando el curso de Argentina Programa para desarrollo full stack utilizando Angular, Java y MySQL.</p>
-                    <input value="" oninput="handleinput(this.value)" type="text" id="edit-info" style="display: none;" />
-                    <button type="submit" id="button-submit" style="display: none;" onclick="handlesubmit()">Editar</button>
+                <div class="col mt-5" id="contenedor-info">
+                    <h2 class="titulo">
+                        Información personal
+                        <i style="margin-left: 2%;" class="icono fa-regular fa-pen-to-square" onclick="editar_info()"></i>
+                    </h2>
+                    <textarea style="border: none; resize:none; width: 100%; max-height: 9rem; min-height: 9rem;" readonly id="text-info">Soy estudiante de la carrera de Contador Público en la facultad de Ciencias Económicas de la Universidad Nacional de Tucumán. Estudié diseño web con HTML, CSS, Javascript, Sass y Bootstrap, además de desarrollo web con ReactJs y Firebase. Actualmente estudiando el curso de Argentina Programa para desarrollo full stack utilizando Angular, Java y MySQL.</textarea>
+                    <button type="submit" id="button-submit" style="display: none;" onclick="handleSubmit()">Editar</button>
                 </div>
             </div>
             <section>
@@ -161,9 +163,45 @@
                         </div>
                     </div>
                 </article>
+                <!-- Articulo de proyectos -->
+                <article>
+                    <div class="row">
+                        <div class="col-5 contenedor-subtitulo">
+                            <h2 class="titulo">PROYECTOS</h2>
+                        </div>
+                    </div>
+                    <article class="row d-flex align-items-center mb-3">
+                        <div class="col-3">
+                            <img src="img/proyectos.jpg" class="foto-exp" alt="Proyecto 1">
+                        </div>
+                        <div class="col">
+                            <h3 class="titulo-2">Proyecto 1</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolore architecto error id dicta obcaecati consequuntur perferendis debitis quaerat ipsa saepe inventore nam doloribus ducimus, a sed dignissimos iusto illum!</p>
+                        </div>
+                    </article>
+                    <article class="row d-flex align-items-center mb-3">
+                        <div class="col-3">
+                            <img src="img/proyectos.jpg" class="foto-exp" alt="Proyecto 2">
+                        </div>
+                        <div class="col">
+                            <h3 class="titulo-2">Proyecto 2</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolore architecto error id dicta obcaecati consequuntur perferendis debitis quaerat ipsa saepe inventore nam doloribus ducimus, a sed dignissimos iusto illum!</p>
+                        </div>
+                    </article>
+                    <article class="row d-flex align-items-center">
+                        <div class="col-3">
+                            <img src="img/proyectos.jpg" class="foto-exp" alt="Proyecto 3">
+                        </div>
+                        <div class="col">
+                            <h3 class="titulo-2">Proyecto 3</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolore architecto error id dicta obcaecati consequuntur perferendis debitis quaerat ipsa saepe inventore nam doloribus ducimus, a sed dignissimos iusto illum!</p>
+                        </div>
+                    </article>
+                </article>
             </section>
         </section>
     </div>
-    <script src="script.js"></script>
+
+    <script src="scripts/edit-info.js"></script>
 </body>
 </html>

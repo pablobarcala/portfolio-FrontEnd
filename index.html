@@ -10,117 +10,130 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container-fluid">
+    <!-- Ya edité el navbar, about y educacion como lo tengo en angular, corregir clases iguales en about y secciones educacion y experiencias. Falta enviar el html de experiencias. Agregar además el footer -->
+    <div>
+        <!-- NAVBAR -->
         <header>
-            <div class="row d-flex justify-content-between align-items-center">
-                <div class="col-8">
-                    <img src="img/Logos inti y arg programa.png" width="50%" alt="Imagen de arg. programa"/>
+            <div class="row container-fluid contenedor-navbar">
+                <div class="col-lg-8 col-md-6 col-9 d-flex align-items-center">
+                    <img src="img/Logos inti y arg programa.png" width="50%" class="logo-arg-programa" alt="Imagen de arg. programa"/>
                 </div>
-                <div class="col-4 d-flex justify-content-between align-items-center">
-                    <div>
-                        <a title="Whatsapp" target="_blank" class="nav-link iconos" href="https://wa.me/+543815465017">
+                <div class="col-lg-4 col-md-6 col-3 navbar d-flex justify-content-between align-items-center">
+                    <div class="contenedor-iconos">
+                        <a rel="noopener" title="Whatsapp" target="_blank" class="nav-link link" href="https://wa.me/+543815465017">
                             <i class="fa-brands fa-whatsapp icono"></i>
                         </a>
-                        <a title="Instagram" target="_blank" class="nav-link iconos" href="https://www.instagram.com/pablo.barcala/">
+                        <a rel="noopener" title="Instagram" target="_blank" class="nav-link link" href="https://www.instagram.com/pablo.barcala/">
                             <i class="fa-brands fa-instagram icono"></i>
                         </a>
-                        <a title="Github" target="_blank" class="nav-link iconos" href="https://github.com/pablobarcala">
+                        <a rel="noopener" title="Github" target="_blank" class="nav-link link" href="https://github.com/pablobarcala">
                             <i class="fa-brands fa-github icono"></i>
                         </a>
-                        <a title="LinkedIn" target="_blank" class="nav-link iconos" href="https://www.linkedin.com/in/pablo-dami%C3%A1n-barcala-60a1a923a/">
+                        <a rel="noopener" title="LinkedIn" target="_blank" class="nav-link link" href="https://www.linkedin.com/in/pablo-dami%C3%A1n-barcala-60a1a923a/">
                             <i class="fa-brands fa-linkedin icono"></i>
                         </a>
                     </div>
-                    <button class="btn btn-warning" type="button">LOGIN</i></button>
+                    <button class="btn btn-warning btn-login" type="button">LOGIN</button>
                 </div>
-            </div>
+            </div>            
         </header>
         <section>
-            <img src="img/2.jpg" class="banner" alt="BANNER">
-            <div class="row">
-                <div class="col-5">
-                    <img src="img/img-pablo.jpeg" class="foto-perfil" alt="Imagen de Pablo Damián Barcala">
-                    <div class="contenedor-titulo">
-                        <h1 class="titulo titulo__nombre">Pablo Damián Barcala</h1>
-                        <h4>Full stack developer Jr.</h4>
+            <!-- ABOUT -->
+            <section>
+                <div class="banner">
+                    <div class="caja-titulo d-flex align-items-center justify-content-center">
+                        <div class="contenedor-titulo">
+                            <h1 class="display-3">Pablo Damián Barcala</h1>
+                            <h3>Proyecto portfolio</h3>
+                        </div>
                     </div>
                 </div>
-                <div class="col mt-5" id="contenedor-info">
-                    <h2 class="titulo">
-                        Información personal
-                        <i style="margin-left: 2%;" class="icono fa-regular fa-pen-to-square" onclick="editar_info()"></i>
-                    </h2>
-                    <textarea style="border: none; resize:none; width: 100%; max-height: 9rem; min-height: 9rem;" readonly id="text-info">Soy estudiante de la carrera de Contador Público en la facultad de Ciencias Económicas de la Universidad Nacional de Tucumán. Estudié diseño web con HTML, CSS, Javascript, Sass y Bootstrap, además de desarrollo web con ReactJs y Firebase. Actualmente estudiando el curso de Argentina Programa para desarrollo full stack utilizando Angular, Java y MySQL.</textarea>
-                    <button type="submit" id="button-submit" style="display: none;" onclick="handleSubmit()">Editar</button>
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 col-12 presentacion">
+                        <img src="img/img-pablo.jpeg" class="foto-perfil" alt="Imagen de Pablo Damián Barcala">
+                        <div class="contenedor-nombre">
+                            <h2>Pablo Damián Barcala</h2>
+                            <h4>Full stack developer Jr.</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6 mt-5" id="contenedor-info">
+                        <div class="informacion">
+                            <h2>Información personal</h2>
+                            <i class="icono-edit fa-regular fa-pen-to-square"></i>
+                        </div>
+                        <p id="text-info">
+                            Soy estudiante de la carrera de Contador Público en la facultad de Ciencias Económicas de la Universidad Nacional de Tucumán. Estudié diseño web con HTML, CSS, Javascript, Sass y Bootstrap, además de desarrollo web con ReactJs y Firebase. Actualmente estudiando el curso de Argentina Programa para desarrollo full stack utilizando Angular, Java y MySQL.
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </section>
             <section>
-                <!-- Articulo de experiencias -->
+                <!-- Articulo de educación -->
                 <article>
                     <div class="row">
-                        <div class="col-5 contenedor-subtitulo">
-                            <h2 class="titulo">EXPERIENCIA</h2>
+                        <div class="col-lg-5 col-md-6 col-12 contenedor-articulo">
+                            <h2 class="titulo-articulo">EDUCACIÓN</h2>
                         </div>
                     </div>
                     <article class="row d-flex align-items-center mb-3">
                         <div class="col-3">
-                            <img src="img/exp.jpg" class="foto-exp" alt="Experiencia 1">
+                            <img src="img/edu.jpg" class="foto-edu" alt="Educación 1">
                         </div>
                         <div class="col">
-                            <h3 class="titulo-2">Experiencia 1</h3>
+                            <h3 class="subtitulo">Educación 1</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolore architecto error id dicta obcaecati consequuntur perferendis debitis quaerat ipsa saepe inventore nam doloribus ducimus, a sed dignissimos iusto illum!</p>
                         </div>
                     </article>
                     <article class="row d-flex align-items-center mb-3">
                         <div class="col-3">
-                            <img src="img/exp.jpg" class="foto-exp" alt="Experiencia 2">
+                            <img src="img/edu.jpg" class="foto-edu" alt="Educación 2">
                         </div>
                         <div class="col">
-                            <h3 class="titulo-2">Experiencia 2</h3>
+                            <h3 class="subtitulo">Educación 2</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolore architecto error id dicta obcaecati consequuntur perferendis debitis quaerat ipsa saepe inventore nam doloribus ducimus, a sed dignissimos iusto illum!</p>
                         </div>
                     </article>
                     <article class="row d-flex align-items-center">
                         <div class="col-3">
-                            <img src="img/exp.jpg" class="foto-exp" alt="Experiencia 3">
+                            <img src="img/edu.jpg" class="foto-edu" alt="Educación 3">
                         </div>
                         <div class="col">
-                            <h3 class="titulo-2">Experiencia 3</h3>
+                            <h3 class="subtitulo">Educación 3</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolore architecto error id dicta obcaecati consequuntur perferendis debitis quaerat ipsa saepe inventore nam doloribus ducimus, a sed dignissimos iusto illum!</p>
                         </div>
                     </article>
                 </article>
-                <!-- Articulo de educación -->
+                <!-- Articulo de experiencias -->
                 <article>
                     <div class="row">
-                        <div class="col-5 contenedor-subtitulo">
-                            <h2 class="titulo">EDUCACIÓN</h2>
+                        <div class="col-lg-5 col-md-6 col-12 contenedor-articulo">
+                            <h2 class="titulo-articulo">Experiencia</h2>
                         </div>
                     </div>
                     <article class="row d-flex align-items-center mb-3">
                         <div class="col-3">
-                            <img src="img/edu.jpg" class="foto-exp" alt="Educación 1">
+                            <img src="img/exp.jpg" class="foto-edu" alt="Experiencia 1">
                         </div>
                         <div class="col">
-                            <h3 class="titulo-2">Educación 1</h3>
+                            <h3 class="subtitulo">Experiencia 1</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolore architecto error id dicta obcaecati consequuntur perferendis debitis quaerat ipsa saepe inventore nam doloribus ducimus, a sed dignissimos iusto illum!</p>
                         </div>
                     </article>
                     <article class="row d-flex align-items-center mb-3">
                         <div class="col-3">
-                            <img src="img/edu.jpg" class="foto-exp" alt="Educación 2">
+                            <img src="img/exp.jpg" class="foto-edu" alt="Experiencia 2">
                         </div>
                         <div class="col">
-                            <h3 class="titulo-2">Educación 2</h3>
+                            <h3 class="subtitulo">Experiencia 2</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolore architecto error id dicta obcaecati consequuntur perferendis debitis quaerat ipsa saepe inventore nam doloribus ducimus, a sed dignissimos iusto illum!</p>
                         </div>
                     </article>
                     <article class="row d-flex align-items-center">
                         <div class="col-3">
-                            <img src="img/edu.jpg" class="foto-exp" alt="Educación 3">
+                            <img src="img/exp.jpg" class="foto-edu" alt="Experiencia 3">
                         </div>
                         <div class="col">
-                            <h3 class="titulo-2">Educación 3</h3>
+                            <h3 class="subtitulo">Experiencia 3</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolore architecto error id dicta obcaecati consequuntur perferendis debitis quaerat ipsa saepe inventore nam doloribus ducimus, a sed dignissimos iusto illum!</p>
                         </div>
                     </article>
@@ -128,72 +141,71 @@
                 <!-- Articulo de habilidades -->
                 <article>
                     <div class="row">
-                        <div class="col-5 contenedor-subtitulo">
-                            <h2 class="titulo">Hard & soft skills</h2>
+                        <div class="col-5 contenedor-articulo">
+                            <h2 class="titulo-articulo">Hard & soft skills</h2>
                         </div>
                     </div>
-                    <!-- Fila de habilidades 1 -->
-                    <div class="row display-flex justify-content-between">
-                        <div class="col-4">
-                            <p class="h4">HTML</p>
-                            <progress value="90" max="100" />
-                        </div>
-                        <div class="col-4">
-                            <p class="h4">CSS</p>
-                            <progress value="90" max="100" />
-                        </div>
-                        <div class="col-4">
-                            <p class="h4">Javascript</p>
-                            <progress value="70" max="100" />
-                        </div>
-                    </div>
-                    <!-- Fila de habilidades 2 -->
-                    <div class="row display-flex justify-content-between">
-                        <div class="col-4">
-                            <p class="h4">Java</p>
-                            <progress value="30" max="100" />
-                        </div>
-                        <div class="col-4">
-                            <p class="h4">Angular</p>
-                            <progress value="20" max="100" />
-                        </div>
-                        <div class="col-4">
-                            <p class="h4">Bootstrap</p>
-                            <progress value="80" max="100" />
+                    <div class="row contenedor-habilidades">
+                        <!-- Fila de habilidades 1 -->
+                        <div class="col-12 row display-flex justify-content-between container-fluid">
+                            <div class="col-sm-4 col-6">
+                                <p class="h4">HTML</p>
+                                <progress value="90" max="100" />
+                            </div>
+                            <div class="col-sm-4 col-6">
+                                <p class="h4">CSS</p>
+                                <progress value="90" max="100" />
+                            </div>
+                            <div class="col-sm-4 col-6">
+                                <p class="h4">Javascript</p>
+                                <progress value="70" max="100" />
+                            </div>
+                            <div class="col-sm-4 col-6">
+                                <p class="h4">Java</p>
+                                <progress value="30" max="100" />
+                            </div>
+                            <div class="col-sm-4 col-6">
+                                <p class="h4">Angular</p>
+                                <progress value="35" max="100" />
+                            </div>
+                            <div class="col-sm-4 col-6">
+                                <p class="h4">Bootstrap</p>
+                                <progress value="80" max="100" />
+                            </div>
                         </div>
                     </div>
                 </article>
                 <!-- Articulo de proyectos -->
                 <article>
                     <div class="row">
-                        <div class="col-5 contenedor-subtitulo">
-                            <h2 class="titulo">PROYECTOS</h2>
+                        <div class="col-lg-5 col-md-6 col-12 contenedor-articulo">
+                            <h2 class="titulo-articulo">Proyectos</h2>
                         </div>
                     </div>
                     <article class="row d-flex align-items-center mb-3">
                         <div class="col-3">
-                            <img src="img/proyectos.jpg" class="foto-exp" alt="Proyecto 1">
+                            <img src="img/proyectos.jpg" class="foto-edu" alt="Proyecto 1">
                         </div>
                         <div class="col">
-                            <h3 class="titulo-2">Proyecto 1</h3>
+                            <h3 class="subtitulo">Proyecto 1</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolore architecto error id dicta obcaecati consequuntur perferendis debitis quaerat ipsa saepe inventore nam doloribus ducimus, a sed dignissimos iusto illum!</p>
                         </div>
                     </article>
                     <article class="row d-flex align-items-center mb-3">
                         <div class="col-3">
-                            <img src="img/proyectos.jpg" class="foto-exp" alt="Proyecto 2">
+                            <img src="img/proyectos.jpg" class="foto-edu" alt="Proyecto 2">
                         </div>
                         <div class="col">
-                            <h3 class="titulo-2">Proyecto 2</h3>
+                            <h3 class="subtitulo">Proyecto 2</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolore architecto error id dicta obcaecati consequuntur perferendis debitis quaerat ipsa saepe inventore nam doloribus ducimus, a sed dignissimos iusto illum!</p>
                         </div>
                     </article>
                     <article class="row d-flex align-items-center">
                         <div class="col-3">
-                            <img src="img/proyectos.jpg" class="foto-exp" alt="Proyecto 3">
+                            <img src="img/proyectos.jpg" class="foto-edu" alt="Proyecto 3">
                         </div>
                         <div class="col">
-                            <h3 class="titulo-2">Proyecto 3</h3>
+                            <h3 class="subtitulo">Proyecto 3</h3>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dolore architecto error id dicta obcaecati consequuntur perferendis debitis quaerat ipsa saepe inventore nam doloribus ducimus, a sed dignissimos iusto illum!</p>
                         </div>
                     </article>

@@ -1,25 +1,68 @@
 * {
-    background-color: rgb(34, 34, 34);
-    color: #fff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
 }
 
-/* --------------- HEADER --------------- */
-
-.row{
-    padding: 0 20px;
+.row {
+    margin-left: 0;
+    margin-right: 0;
 }
 
-.iconos{
+/* ------------------ DESKTOP ------------------ */
+
+@media (max-width: 1400px) {
+    * {
+        font-size: 20px;
+    }
+}
+
+/* ------------------ TABLET ------------------ */
+
+@media (max-width: 768px) {
+    * {
+        font-size: 16px;
+    }
+}
+
+/* ------------------ MOBILE ------------------ */
+
+@media (max-width: 450px) {
+    * {
+        font-size: 14px;
+    }
+}
+
+
+
+
+/* --------------- NAVBAR --------------- */
+
+.link{
     display: inline;
     margin-right: 1rem;
     transition: opacity .15s ease-in-out;
 }
 
-.iconos:hover{
+.link:hover{
     opacity: 60%;
+    text-shadow: #fff 1px 1px 40px;
 }
+
+.icono{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.btn-login{
+    font-size: 1.25rem;
+}
+
+.contenedor-navbar {
+    background-color: #000;
+    position: fixed;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+/* ------------------ COLOR DE CADA ICONO --------------------- */
 
 .fa-whatsapp{
     color: #128c7e;
@@ -37,78 +80,168 @@
     color: #0077b5;
 }
 
-.icono{
-    background-color: transparent;
-    font-size: 2rem;
-    cursor: pointer;
+/* ------------------ QUERIES --------------------- */
+
+@media (max-width: 992px) {
+    .logo-arg-programa {
+        width: 70%;
+    }
 }
 
-.btn{
-    float: right;
-    font-size: 1.25rem;
+@media (max-width: 768px) {
+    .contenedor-iconos {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: space-around;
+    }
 }
 
-/* ------------------ BODY ----------------- */
+@media (max-width: 574px) {
+    .logo-arg-programa {
+        width: 90%;
+    }
+}
 
-.banner{
+
+
+
+/* ------------------ ABOUT ----------------- */
+/* ---------------------------- TITULO ---------------------------- */
+.banner {
     width: 100%;
-    display: block;
-    margin-right: 0;
-    border-radius: 30px;
-    opacity: 50%;
-    margin-top: 10px;
+    background: url('img/2.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 0;
+    height: 800px;
+    margin: 0;
+    padding: 0;
 }
 
-.foto-perfil{
-    border-radius: 50%;
-    width: 18%;
-    position: absolute;
-    margin: -8% 0 0 9.5%;
-    box-shadow: 0px 0px 30px rgb(165, 165, 165);
+.caja-titulo {
+    width: 100%;
+    height: 100%;
 }
 
-.contenedor-titulo{
+.contenedor-titulo {
+    border: 5px solid rgba(87, 87, 87, 0.5);
+    background-color: rgba(243, 205, 34, 0.7);
+    width: 60%;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* ---------------------------- PRESENTACION ---------------------------- */
+.presentacion {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30%;
-    border: #c95295 2px solid;
-    border-radius: 5px;
-    box-shadow: 0px 0px 15px #883865;
-    margin-right: 1%;
-    padding: 5px 0;
+    margin-top: -12%;
 }
 
-.titulo {
+.foto-perfil {
+    width: 60%;
+    border-radius: 50%;
+}
+
+.contenedor-nombre {
+    background-color: rgba(179, 179, 179, 0.5);
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+/* ----------------------------- INFORMACION -------------------------------- */
+.informacion {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.icono-edit {
+    cursor: pointer;
+    font-size: 1.3rem;
+    display: none;
+}
+
+.informacion:hover .icono-edit{
+    display: block;
+}
+/* --------------------------- QUERIES ------------------------------ */
+@media (max-width: 992px) {
+    .informacion {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .foto-perfil {
+        width: 40%;
+    }
+
+    .informacion {
+        width: 50%;
+    }
+}
+
+@media (max-width: 540px) {
+    .informacion {
+        width: 70%;
+    }
+}
+
+
+
+/* ------------------------ EDUCACION ---------------------- */
+
+.titulo-articulo {
     font-weight: 700;
     font-size: 2.3rem;
     text-transform: uppercase;
     color: #fff;
     background-color: transparent;
+    margin-bottom: 0;
+    margin: 1% 0;
 }
 
-.titulo__nombre {
-    text-align: center;
-}
-
-.contenedor-subtitulo{
+.contenedor-articulo{
     background-color: rgb(122, 122, 122);
     text-align: center;
     margin: 3% 0;
     border-radius: 3px;
-    padding-top: 0.25%;
 }
 
-.foto-exp {
+.foto-edu {
     width: 50%;
     margin-left: 25%;
 }
 
-.titulo-2{
+.subtitulo{
     font-weight: 500;
     font-size: 2rem;
 }
 
+
+@media (max-width: 768px) {
+    .contenedor-articulo {
+        border-radius: 0;
+    }
+}
+
+/* ------------------ HABILIDADES -------------------- */
+.contenedor-habilidades > div {
+    text-align: center;
+}
+
+progress {
+    background-color: green;
+}
 /* ------------------ MEDIA QUERIES ------------------ */
 @media screen and (max-width: 910px){
     .btn{
@@ -123,7 +256,7 @@
         font-size: 1.5rem;
     }
 
-    .titulo {
+    .titulo-articulo {
         text-align: center;
     }
 }
@@ -137,7 +270,7 @@
         display: none;
     }
 
-    .titulo {
+    .titulo-articulo {
         font-size: 1.75rem;
     }
 }
